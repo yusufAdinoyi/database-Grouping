@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="bootstrap-5.1.1-dist/css/bootstrap.min.css" media = "all">
+  <link rel="stylesheet" href="bootstrap-5.1.1-dist/css/bootstrap.min.css" media = "screen">
+  <link href="/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <title>HND1 CPS GROUPING | process</title>
+  <style>
+    #main-nav{
+      padding: .4rem .4rem 0 .4rem;
+    }
+  </style>
+</head>
+<body>
+  <nav id="main-nav">
+    <div class="container">
+      <h3 class="logo">CPS | <span class="primary-color">HND1</span></h3>
+      <ul>
+        <li><a href="index.html" class="current">Home</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <form id="process-form">
+      <div class="form-info">
+        <h3>Ballot <span class="primary-color">Form</span></h3>
+        <p>Kindly input your name and matric number and press continue to choose a ballot. You can leave the matric number field empty.</p>
+        <p><b>Note:</b> You cannot edit your name or matric number after click on continue</p>
+      </div>
+      <div id="alert-box-container"></div>    
+      <div class="mb-3">
+        <label for="fullname" class="col-form-label">Full Name:</label>
+        <input type="text" class="form-control" id="fullname" />
+      </div>
+      <div class="mb-3">
+        <label for="matricno" class="col-form-label">Matric No. (Optional):</label>
+        <input type="text" class="form-control" id="matricno" />
+      </div>
+      <button type="submit" class="btn btn-primary">Continue</button>
+    </form>
+  </div>
+  <div id="ballot-panel">
+    <div class="container">
+      <h1>Choose <span class="primary-color">Ballot</span></h1>
+      <div class="ballot-box">
+        <button type="submit" id="ballot" class="ballotA">A</button>
+        <button type="submit" id="ballot" class="ballotB">B</button>
+        <button type="submit" id="ballot" class="ballotC">C</button>
+        <button type="submit" id="ballot" class="ballotD">D</button>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>copyright &copy; 2022 | codeGraphics <span class="primary-color">Design</span></p>
+  </footer>
+  <script src="bootstrap-5.1.1-dist/js/bootstrap.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

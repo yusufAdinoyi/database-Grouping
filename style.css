@@ -1,0 +1,117 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+}
+.container{
+  max-width: 900px;
+  margin: auto;
+  padding: 1rem;
+}
+/* alert */
+.success, .error {  
+  color: white;
+  padding: 5px;
+  margin: 5px 0 15px 0;
+  border-radius: 5px 0px 5px 0px;
+}
+.success {
+  background: rgba(35, 158, 90, 0.781);
+}
+.error {
+  background: rgba(238, 54, 54, 0.822);
+}
+.primary-color{color: dodgerblue;}
+header{height: 91vh;}
+#main-nav{
+  background: #333;
+  color: #fff;
+  width: 100%;
+}
+#main-nav .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* height: 100%; */
+}
+#main-nav .container ul{list-style: none;}
+.current{
+  color: #fff;
+  text-decoration: none;
+  padding: .3rem;
+  border: 2px solid #fff;
+  transition: all .3s ease-in;
+}
+.current:hover{
+  border-color: dodgerblue;
+  color: #fff;
+}
+/* Showcase */
+#showcase{
+  color: #fff;
+  background: #333;
+  padding: 2rem;
+  position: relative;
+  height: 93vh;
+}
+#showcase:before {
+  content: '';
+  background: url('jelil.jpg') no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+}
+.showcase-container{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#showcase .showcase-content{
+  text-align: center;
+  z-index: 1;
+}
+#showcase .showcase-content .current{
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+#ballot-panel{
+  margin: .5rem 0;
+  text-align: center;
+  background: #333;
+  display: none;
+  transition: all .3s ease-in-out;
+  padding: .4rem;
+}
+#ballot-panel p{color: #fff;}
+#ballot-panel h1{color: #fff; margin-bottom: .7rem;}
+#ballot-panel #ballot{
+  display: inline-block;
+  background: dodgerblue;
+  color: dodgerblue;
+  padding: .5rem;
+  border: none;
+  border-radius: 50%;
+  margin:.3rem;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+.groupItem{display: none;}
+table{
+  text-align: left;
+  max-width: 870px;
+  margin: auto;
+}
+footer{
+  background: #333;
+  text-align: center;
+  padding: .5rem .5rem .1rem;
+  color: #fff;
+}
