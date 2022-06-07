@@ -99,7 +99,7 @@ document.querySelector('.ballot-box').addEventListener('click', (e) => {
 
   setTimeout(() => {
     document.querySelector('#ballot-panel').innerHTML = `
-    <form name="form" method="POST" data-netlify="true">
+    <form id="form" method="POST" data-netlify="true">
     <div class="groupItem">
     <input type="text" id="name" value="${fullnameUsed}"/>
     <input type="text" id="matricNo" value="${matricnumberUsed}"/>
@@ -123,7 +123,7 @@ document.querySelector('.ballot-box').addEventListener('click', (e) => {
   },3000)
 })
 document
-  .querySelector("form")
+  .querySelector("#form")
   .addEventListener("submit", handleSubmit);
 
 const handleSubmit = (e) => {
