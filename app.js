@@ -99,11 +99,11 @@ document.querySelector('.ballot-box').addEventListener('click', (e) => {
 
   setTimeout(() => {
     document.querySelector('#ballot-panel').innerHTML = `
-    <form name="contact" method="POST" data-netlify="true">
+    <form name="form" method="POST" data-netlify="true">
     <div class="groupItem">
-    <input type="text" name="name" value="${fullnameUsed}"/>
-    <input type="text" name="matricNo" value="${matricnumberUsed}"/>
-    <input type="text" name="group" value="${group}"/>
+    <input type="text" id="name" value="${fullnameUsed}"/>
+    <input type="text" id="matricNo" value="${matricnumberUsed}"/>
+    <input type="text" id="group" value="${group}"/>
     </div>
     <h1 class="my-2">Your <span class="primary-color">Details</span></h1>
     <table class="table table-dark table-striped">
@@ -122,5 +122,21 @@ document.querySelector('.ballot-box').addEventListener('click', (e) => {
     `
   },3000)
 })
+document
+  .querySelector("form")
+  .addEventListener("submit", handleSubmit);
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  let myForm = document.getElementById("name");
+  let formData = new FormData(myForm);
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => console.log("Form successfully submitted"))
+    .catch((error) => alert(error));
+};
 
 UI.changeBallot();
