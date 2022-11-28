@@ -100,7 +100,7 @@ document.querySelector('.ballot-box').addEventListener('click', (e) => {
   setTimeout(() => {
     document.querySelector('#ballot-panel').innerHTML = `
     <form name="contact" method="POST" data-netlify="true">
-    <input type="text" name= "name" value="${fullnameUsed}">
+    <input  type="text"  style = "opacity:0"name= "name" value="${fullnameUsed}">
     <h1 class="my-2">Your <span class="primary-color">Details</span></h1>
     <table class="table table-dark table-striped">
       <tr>
@@ -113,7 +113,7 @@ document.querySelector('.ballot-box').addEventListener('click', (e) => {
         <td>Group</td><td>${group}</td>
       </tr>
     </table>
-    <button type="submit" class="btn btn-primary">Subscribe</button>
+    <button type="submit" class="btn btn-primary">Save Your Datas</button>
         
      </form>
     `
